@@ -211,7 +211,7 @@ par(mfrow = c(2, 2),
     mar = c(5.1, 6.1, 4.1, 2.1))
 
 ## Plot 1: Linear Prediction (Categorical)
-col_vec <- viridis(length(se_mfx_cat))
+col_vec <- viridis(length(se_mfx_cat)+1)
 plot(
   x = ia_data$x,
   y = ia_data$y,
@@ -235,7 +235,7 @@ for (i in seq_len(ncol(preds_cat))) {
 }
 
 ## Plot 2: Marginal Effect (Categorical)
-col_vec <- viridis(length(se_mfx_cat))
+col_vec <- viridis(length(se_mfx_cat)+1)
 plot (
   x = z_vals_cat,
   y = mfx_cat,
